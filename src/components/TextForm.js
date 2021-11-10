@@ -49,21 +49,21 @@ export default function TextForm(props) { //Here we will create functions that t
                 <h1 >  {props.heading}  </h1>
                 <div className="mb-13">
                 
-                <textarea className="form-control my-3" value = {text} id="MyBox" onChange = {handleOnChange} style={{backgroundColor: props.mode === 'dark'?'#e9ecef':'white'}} rows="5"></textarea>
-                <button className="btn btn-primary mx-2" onClick= {handleUpClick} > Convert to UPPERCASE</button>  
-                <button className="btn btn-primary mx-2" onClick= {handleLoClick} > Convert to lowercase</button> 
-                <button className="btn btn-primary mx-2" onClick= {handleclrClick} > Clear the text</button>  
-                <button className="btn btn-primary mx-2" onClick= {handleCopy} > Copy the text</button> 
-                <button className="btn btn-primary mx-2" onClick= {removeEs} > Remove extra spaces</button> 
+                <textarea  className="form-control my-3" value = {text} id="MyBox" onChange = {handleOnChange} style={{backgroundColor: props.mode === 'dark'?'#e9ecef':'white'}} rows="5"></textarea>
+                <button disabled = {text.length=== 0} className="btn btn-primary mx-2 my-2" onClick= {handleUpClick} > Convert to UPPERCASE</button>  
+                <button disabled = {text.length=== 0} className="btn btn-primary mx-2 my-2" onClick= {handleLoClick} > Convert to lowercase</button> 
+                <button disabled = {text.length=== 0} className="btn btn-primary mx-2 my-2" onClick= {handleclrClick} > Clear the text</button>  
+                <button disabled = {text.length=== 0} className="btn btn-primary mx-2 my-2" onClick= {handleCopy} > Copy the text</button> 
+                <button disabled = {text.length=== 0} className="btn btn-primary mx-2 my-2" onClick= {removeEs} > Remove extra spaces</button> 
                 
                 </div>
             </div>
             <div className="container my-3" style={{color: props.mode === 'dark'?'white':'black'}}>  
                 <h2 style = {{color: props.mode==='light'?'black':'white'}}> Your text summary</h2>
-                <p> {text.split (" ").length} words and {text.length} characters </p>
-                <p> {0.008 * text.split (" ").length} minutes to read this </p>
+                <p> {text.split (" ").filter((element)=> {return element.length!==0}).length} words and {text.length} characters </p>
+                <p> {0.008 * text.split (" ").filter((element)=> {return element.length!==0}).length} minutes to read this </p>
                 <h2> Preview </h2>
-                <p> {text.length>0?text:"Your text will be previwed here "}</p>
+                <p> {text.length>0?text:"Nothing to preview"}</p>
             </div>
         </>
     )

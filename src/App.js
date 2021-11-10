@@ -52,7 +52,7 @@ function App() {
   return (
   <>
     <Router>
-    <Navbar title="Parag's TextUtils" stotra1="Ramraksha stotra" contact="Contact Us" about="About"  mode={mode}
+    <Navbar title="TextUtils" stotra1="Ramraksha stotra" contact="Contact Us" about="About"  mode={mode}
       toggleMode={toggleMode}/>   
     <Alert alert={alert}/>
     <div className="container my-4">
