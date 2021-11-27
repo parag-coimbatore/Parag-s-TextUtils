@@ -50,28 +50,28 @@ function App() {
     }
   }
   return (
-  <>
-    <Router>
-    <Navbar title="TextUtils" stotra1="Ramraksha stotra" contact="Contact Us" about="About"  mode={mode}
-      toggleMode={toggleMode}/>   
-    <Alert alert={alert}/>
-    <div className="container my-4">
-
-      
-    <Switch>
-          <Route exact path="/about"> 
-            <About heading = "About Us" mode={mode}/>  
-          </Route>
-          
-          <Route exact path="/">
-          <TextForm showAlert = {showAlert} heading = "Enter your text to analyze"  mode={mode}/>
-          </Route>
-    </Switch>
-      {/* <About/> */}
-    </div>   
-  </Router>
-  </>
-  );
+    <>
+      <Router>
+      <Navbar title="TextUtils" stotra1="Ramraksha stotra" contact="Contact Us" about="About"  mode={mode}
+        toggleMode={toggleMode}/>   
+      <Alert alert={alert}/>
+      <div className="container my-4">
+  
+        
+      <Switch>
+            <Route exact path="/about"> 
+              <About heading = "About Us" mode={mode}/>  
+            </Route>
+            
+            <Route exact path="/">
+            <TextForm showAlert = {showAlert} heading = "Enter your text to analyze"  mode={mode}/>
+            </Route>
+      </Switch>
+        {/* <About/> */}
+      </div>   
+    </Router>
+    </>
+    );
 }
 
 export default App;

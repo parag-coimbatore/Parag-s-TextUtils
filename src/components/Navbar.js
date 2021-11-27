@@ -18,9 +18,9 @@ export default function Navbar(props) {
               {/* <li className="nav-item">
                 <a className="nav-link" href="/">{props.contact}</a>
               </li> */}
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/about">{props.about}</Link>
-              </li>
+              </li> */}
               {/* <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Courses
@@ -48,6 +48,8 @@ export default function Navbar(props) {
                 <input className="form-check-input" onClick = {props.toggleMode} type="checkbox"  id="flexSwitchCheckDefault"/>
                 <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
               </div>
+              
+              
             
           </div>
         </div>
