@@ -3,7 +3,8 @@ import React , {useState} from 'react'
 
 export default function About(props) {
     return (       
-            <div className = "container my-5"  >  
+            <div className = "container my-5"  > 
+             
             <div className="container my-3" style={{color: props.mode === 'dark'?'white':'black'}}> 
                 <h1>About Us </h1>    
                 <img src="/images/my pic.jpg" class="rounded mx-auto d-block" alt="..."/> 
