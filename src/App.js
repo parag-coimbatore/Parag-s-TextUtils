@@ -30,7 +30,7 @@ function App() {
   const toggleMode = ()=>{  //This function determines what action should be taken when switch in navbar is clicked
     if (mode === 'light'){
       setMode ('dark');  //if mode is light set it to dark
-      document.body.style.backgroundColor = '#042743';  
+      document.body.style.backgroundColor = '#000';  
       showAlert("Dark mode is enabled", "success"); //ShowAlert will show this message and success as Tyoe
       document.title =  'Dark Mode Enabled';
 
@@ -46,17 +46,15 @@ function App() {
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode is enabled", "success");
       document.title =  'Light Mode Enabled';
-      
     }
   }
   return (
     <>
       <Router>
-      <Navbar title="TextUtils" stotra1="Ramraksha stotra" contact="Contact Us" about="About"  mode={mode}
+      <Navbar title="TextIt" stotra1="Ramraksha stotra" contact="Contact Us" about="About"  mode={mode}
         toggleMode={toggleMode}/>   
       <Alert alert={alert}/>
       <div className="container my-4">
-  
         
       <Switch>
             <Route exact path="/about"> 
@@ -64,6 +62,7 @@ function App() {
             </Route>
             
             <Route exact path="/">
+              
             <TextForm showAlert = {showAlert} heading = "Enter your text to analyze"  mode={mode}/>
             </Route>
       </Switch>
